@@ -19,5 +19,9 @@ module.exports = {
       password: "123",
       database: "test-cjs-web-store"
     },
+  },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
   }
 };
