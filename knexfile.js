@@ -22,6 +22,11 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL
+    connection: {
+      host: "localhost",
+      user: "vladimir",
+      password: "123",
+      database: process.env.DATABASE_URL
+    },
   }
 };
