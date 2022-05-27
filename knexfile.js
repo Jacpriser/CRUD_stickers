@@ -23,10 +23,10 @@ module.exports = {
   production: {
     client: 'pg',
     connection: {
-      host: "localhost",
-      user: "vladimir",
-      password: "123",
-      database: process.env.DATABASE_URL
-    },
+      connectionString: process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
+    }
   }
 };
